@@ -2902,7 +2902,7 @@ var Incremancer;
             else this.zombieCursor.visible = !1
         }
         detonateZombie(e) {
-            (e.state == be.attackingTarget || 0 == this.aliveHumans.length && Math.random() < .05) && (this.bones.newBones(e.x, e.y), e.flags.dead = !0, this.causePlagueExplosion(e, e.maxHealth, !0, !0), Math.random() < this.model.brainRecoverChance && this.model.addBrains(1))
+            (e.state == be.attackingTarget) && (this.bones.newBones(e.x, e.y), e.flags.dead = !0, this.causePlagueExplosion(e, e.maxHealth, !0, !0), Math.random() < this.model.brainRecoverChance && this.model.addBrains(1))
         }
         updateZombie(e, t) {
             var s;
