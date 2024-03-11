@@ -35,7 +35,7 @@
         <h4>You currently have {{zm.model.zombiesInCages}} / {{zm.model.zombieCages}} zombies caged</h4>
         <p ng-show="zm.czinfo">You can release them to fight again, or sacrifice them to gain {{zm.model.cagedZombieSacrificeValue().blood|whole}} blood, {{zm.model.cagedZombieSacrificeValue().brains}} brains, and {{zm.model.cagedZombieSacrificeValue().bones}} bones</p>
         <button ng-click="zm.model.releaseCagedZombies()" ng-disabled="zm.model.zombiesInCages == 0 || zm.model.currentState != zm.model.states.playingLevel">Release</button>
-        <button ng-click="zm.model.persistentData.autoRelease = !zm.model.persistentData.autoRelease" class="{{zm.model.persistentData.autoRelease ? 'active' : ''}}">Auto Release</button>
+        <button ng-click="zm.model.persistentData.autoRelease = !zm.model.persistentData.autoRelease" class="{{zm.model.persistentData.autoSacrifice ? 'active' : ''}}">Auto Release</button>
         <button ng-click="zm.model.sacrificeCagedZombies()" ng-disabled="zm.model.zombiesInCages == 0">Sacrifice</button>
       </div>
     </div>
