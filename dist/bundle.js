@@ -1133,7 +1133,7 @@ var Incremancer;
             this.level = e, this.startGame()
         }
         startGame() {
-            this.currentState = this.states.playingLevel, this.setupLevel(), this.updatePlayingLevel(), this.persistentData.autoRelease && this.releaseCagedZombies(), this.persistentData.autoSacrifice && !this.persistentData.autoRelease && this.sacrificeCagedZombies()
+            this.currentState = this.states.playingLevel, this.setupLevel(), this.updatePlayingLevel(), this.persistentData.autoRelease && this.releaseCagedZombies(), this.persistentData.autoSacrifice && this.sacrificeCagedZombies()
         }
         nextLevel() {
             this.level++, this.currentState = this.states.playingLevel, this.setupLevel(), this.updatePlayingLevel(), this.persistentData.autoRelease && this.releaseCagedZombies()
