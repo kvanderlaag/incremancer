@@ -1063,6 +1063,7 @@ var Incremancer;
                 trophies: [],
                 vipEscaped: [],
                 autoRelease: !1,
+                autoSacrifice: !1,
                 skeleton: null,
                 skeletonTalents: []
             }
@@ -1132,7 +1133,7 @@ var Incremancer;
             this.level = e, this.startGame()
         }
         startGame() {
-            this.currentState = this.states.playingLevel, this.setupLevel(), this.updatePlayingLevel(), this.persistentData.autoRelease && this.releaseCagedZombies()
+            this.currentState = this.states.playingLevel, this.setupLevel(), this.updatePlayingLevel(), this.persistentData.autoRelease && this.releaseCagedZombies(), this.persistentData.autoSacrifice && !this.persistentData.autoRelease && this.sacrificeCagedZombies()
         }
         nextLevel() {
             this.level++, this.currentState = this.states.playingLevel, this.setupLevel(), this.updatePlayingLevel(), this.persistentData.autoRelease && this.releaseCagedZombies()
